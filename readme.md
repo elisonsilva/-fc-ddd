@@ -20,7 +20,7 @@ Rodando:
 npm install
 npm test
 ```
-![Print screen](https://github.com/elisonsilva/-fc-ddd/blob/master/screenshot.jpg?raw=true)
+![Print screen](https://raw.githubusercontent.com/elisonsilva/-fc-ddd/master/screenshot.png?token=GHSAT0AAAAAAB3X6Z73BMPKELW6F35W3Z7CY4FIDOA)
 
 ### Anotações
 Entity
