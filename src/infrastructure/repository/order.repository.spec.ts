@@ -94,6 +94,10 @@ describe("Order repository test", () => {
     const product = new Product("123", "Product 2", 10);
     await productRepository.create(product);
 
+    // Update Product
+    product.changeName("Update Product 3");
+    product.changePrice(14);
+
     const orderItem = new OrderItem(
       "1",
       product.name,
@@ -106,9 +110,6 @@ describe("Order repository test", () => {
 
     const orderRepository = new OrderRepository();
     await orderRepository.create(order);
-
-    product.changeName("Update Product 3");
-    product.changePrice(28);
 
     await orderRepository.update(order);
 
@@ -124,8 +125,8 @@ describe("Order repository test", () => {
       items: [
         {
           id: orderItem.id,
-          name: orderItem.name,
-          price: orderItem.price,
+          name: "Update Product 3",
+          price: 28,
           quantity: orderItem.quantity,
           order_id: order.id,
           product_id: orderItem.productId,
